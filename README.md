@@ -13,7 +13,7 @@ callback: ssr执行完成的回调，参数是err和后端渲染后的html
 ```javascript
 import SSR from 'bun-vuessr-plugin'
 SSR({
-	state,
+    state,
     url: ctx.request.path,
     templatePath,
     clientManifestPath,

@@ -10,7 +10,7 @@ serverManifestPath：server端使用的vue-ssr-server-bundle.json
 clientManifestPath：client端使用的vue-ssr-client-bundle.json
 callback: ssr执行完成的回调，参数是err和后端渲染后的html
 
-```
+```javascript
 import SSR from 'bun-vuessr-plugin'
 SSR({
 	state,
@@ -32,8 +32,8 @@ SSR({
                 ctx.body = JSON.stringify(err);
             }
         }
-	    if (renderHtml) {
-	         ctc.body = renderHtml;      
-	    }
+	if (renderHtml) {
+	    ctc.body = renderHtml;      
+	}
 });
 ```

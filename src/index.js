@@ -18,7 +18,9 @@ const SSR = ({ state, url, templatePath, serverManifestPath, clientManifestPath 
 	    state,
 	    url
 	};
+	process.SERVERBUILD = true;
 	renderer.renderToString(context, (err, html) => {
+		process.SERVERBUILD = false;
 		cb(err, html);
 	})
 }
